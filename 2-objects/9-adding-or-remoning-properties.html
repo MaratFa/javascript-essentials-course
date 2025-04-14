@@ -27,8 +27,16 @@
       person.eat();
 
       // Exercise
-      
+      function GroceryItem(name, quantity) {
+        this.name = name;
+        this.quantity = quantity;
+        this.display = () => console.log(`${quantity} x ${this.name}`);
+      }
 
+      const newItem = new GroceryItem("Banana", 4);   
+      newItem.groceryAisle = "Produce";
+      console.log(newItem.display());
+      
     </script>
   </body>
 </html>
