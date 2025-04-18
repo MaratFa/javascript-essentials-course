@@ -33,11 +33,16 @@
 
       // Exercise
       function GroceryItem(name, quantity) {
-        
+        this.name = name;
+        this.quantity = quantity;
+        this.display = function () {
+          console.log(`${this.quantity} x ${this.name}`);
+        };
       }
 
-
-      
+      function GroceryList () {
+        const items = []; // Private array to store items
+      }
     </script>
   </body>
 </html>
