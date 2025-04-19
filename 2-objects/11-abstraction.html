@@ -40,16 +40,32 @@
         };
       }
 
-      function GroceryList () {
+      function GroceryList() {
         const items = []; // Private array to store items
 
+        // Private method
+        const calculateTotalQuantity = function () {
+          return items.reduce((total, item) => total + item.quantity, 0);
+        };
 
+        this.addItem = function (name, quantity) {
+          const item = new GroceryItem(name, quantity);
+          items.push(item);
+        };
 
+        this.displayItems = function () {
+          items.forEach((item) => item.display());
+        };
 
-
-
-        
+        this.getTotalQuantity = function () {
+          return calculateTotalQuantity();
+        };
       }
+
+      const myList = new GroceryList();
+      myList.addItem("Banana", 5);
+      myList.addItem("Apple", 3);
+      myList.displayItems();
     </script>
   </body>
 </html>
