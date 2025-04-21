@@ -6,19 +6,83 @@
   <body>
     <script>
       // Lesson
+
+      /*
       function example() {
         const num = 5;
 
-        function logNum() {
+        return function logNum() {
           console.log(num);
         }
 
-        logNum();
       }
 
-      example();
+      const innerFunction = example();
+      innerFunction();
+      */
+
+      /*
+
+      function makeFunctions() {
+        let privateNum = 0;
+
+        function privateIncrement() {
+          privateNum++;
+        }
+
+        return {
+          logNum: () => console.log(privateNum),
+          increment: () => {
+            privateIncrement();
+            console.log(`Incremented, privateNum = ${privateNum}`);
+          },
+        };
+      }
+
+      const { logNum, increment } = makeFunctions();
+      logNum();
+      increment();
+      logNum();
+      */
+
+      function Programmer(name, preferredLanguage) {
+        // Private property
+        let privateName = name;
+
+        // Public property
+        this.preferredLanguage = preferredLanguage;
+
+        // Public method
+        this.writeCode = function () {
+          console.log(`${privateName} codes in ${this.preferredLanguage}`);
+        };
+
+        // Private method
+        let drinkCoffee = function () {
+          console.log("Gulp...");
+        };
+
+        // Public method that uses a closure
+        this.startDay = function () {
+          drinkCoffee();
+        };
+      }
+
+      const programmer = new Programmer("Alice", "JavaScript");
+      programmer.writeCode();
+      programmer.startDay();
 
       // Exercise
+
+
+
+
+
+
+
+
+
+      
     </script>
   </body>
 </html>
