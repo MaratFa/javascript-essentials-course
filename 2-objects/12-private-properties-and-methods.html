@@ -82,7 +82,7 @@
         };
 
         // Public method to deposit money
-        this.depost = function (anount) {
+        this.deposit = function (amount) {
           if (isValidAmount(amount)) {
             balance += amount;
             console.log(`Deposited: $${amount}`);
@@ -108,19 +108,13 @@
         // Public method to get the current balance
         this.getBalance = function () {
           return balance;
-        }
+        };
       }
 
       const myAccount = new BankAccount(100);
-      myAccount.depost(50);
-
-
-
-
-      
-      
-
-
+      myAccount.deposit(50);
+      myAccount.withdraw(30);
+      console.log(myAccount.getBalance());
     </script>
   </body>
 </html>
