@@ -15,15 +15,15 @@
             get: function () {
               return privateName;
             },
+            set: function (newName) {
+              if (!newName) {
 
 
 
 
-
-            
-
-            
-
+                
+              }
+            },
           },
         });
 
@@ -47,7 +47,7 @@
       }
 
       const programmer = new Programmer("Alice", "JavaScript");
-      console.log(programmer['name']);
+      console.log(programmer["name"]);
     </script>
   </body>
 </html>
