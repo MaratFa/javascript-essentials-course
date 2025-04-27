@@ -91,7 +91,12 @@
         Object.setPrototypeOf(this, programmerPrototype);
       }
 
-      cons
+      const jsProgrammer = new Programmer("Alice", "JavaScript");
+      jsProgrammer.writeCode();
+      jsProgrammer.drinkCoffee();
+      console.log(jsProgrammer.name);
+      jsProgrammer.name = 'John';
+      console.log(jsProgrammer.name);
     </script>
   </body>
 </html>
