@@ -1,0 +1,11 @@
+{
+  "name": "1-package.json",
+  "version": "1.0.0",
+  "description": "Lesson on node package manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John",
+  "license": "ISC"
+}
